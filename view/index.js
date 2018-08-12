@@ -10,6 +10,12 @@ const instructions = Platform.select({
   
 
 export default class Main extends React.Component{
+    componentDidMount() {
+        fetch('http://47.96.114.115/api/user/userList').then(res => res.json()).then(res => {
+            console.info(res, 2222222);
+        })
+    }
+
     render() {
         return (
             <View style={styles.container}>

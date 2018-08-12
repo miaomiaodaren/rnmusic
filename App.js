@@ -15,14 +15,16 @@ import SplashScreen from 'react-native-splash-screen'
 
 type Props = {};
 export default class App extends Component<Props> {
-  componentDidMount() {
-	  setTimeout(() => {
-			SplashScreen.hide()
-	  }, 2000)
-  }
-  render() {
-    return (
-		<Route />
-    );
-  }
+	componentDidMount() {
+		setTimeout(() => {
+            SplashScreen.hide()
+		}, 1000)
+		
+		
+	}
+	render() {
+		return (
+			<Route />
+		);
+	}
 }

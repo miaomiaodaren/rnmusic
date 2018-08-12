@@ -13,7 +13,12 @@ const Router = [
 
 
 const Route = StackNavigator({
-    Home: {screen: Main}, // 登录页
+    Home: {
+        screen: Main,
+        navigationOptions: ({navigation}) => ({
+            header: null
+        })
+    }, // 登录页
     Guider: {
         screen: Guide,
         navigationOptions: ({navigation}) => ({
