@@ -1,19 +1,23 @@
+import React from 'react';
 import {StackNavigator} from 'react-navigation'
-import Main from './index';
+import TabNav from './tabNavigator'
 import Guide from './guide'
 const Router = [
     {
-        path: '/index',
-        component: Main
-    }, {
         path: '/guide',
         component: Guide
     }
 ]
 
 
+
 const Route = StackNavigator({
-    Home: {screen: Main}, // 登录页
+    Main: {
+        screen: TabNav,
+        navigationOptions: ({navigation}) => ({
+            header: null,
+        })
+    }, 
     Guider: {
         screen: Guide,
         navigationOptions: ({navigation}) => ({
@@ -21,7 +25,8 @@ const Route = StackNavigator({
         })
     }
 }, {
-    initialRouteName: 'Guider',
+    initialRouteName: 'Guider'
 })
+
 
 export default Route
